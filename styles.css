@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #f3f3f3;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.logo1{
+    height: 160px;
+    text-align: center;
+ }
+
+ /*   Header   */
+
+ header{
+     padding: 40px 0;
+     padding-top: 5px; 
+ }
+
+ header .logo{
+     text-align: center; 
+     margin-bottom: 20px;
+ }
+ 
+ header .logo p{
+     color: #697777;
+ }
+
+/*Borde de las imagenes*/
+.border{
+    border: black 6px solid;
+    border-radius: 10px;
+} 
+header form { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+            /*Barra de busqueda*/
+
+ header .searcher{
+     width: 70%;
+     height: 40px;
+     line-height: 40px; 
+     background: #fff;
+     padding: 0 20px;
+     border-radius: 100px;
+     border: none; 
+     text-align: center;
+     font-size: 16px;
+ }
+
+ header .category{ 
+     display: flex; 
+     justify-content: center;
+     flex-wrap: wrap; 
+ }
+
+ /*enlaces*/
+header .category a{
+    color: #697777;
+    margin: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+ header .category a.active{ 
+     color: #000;
+ }
+
+ /* Imagenes con libreria Muuri, crea grids que funcionan con transiciones y es reponsive */
+ /*trabajar con Grid*/
+
+ .grid{
+     position: relative; 
+     width: 100%; 
+     opacity: 0;
+     transition: opacity 0.5s  linear 1s;
+ }
+
+.grid.img-loaded{ 
+    opacity: 1;
+}
+
+
+ .grid .item{ 
+    position: absolute;  
+    display: block;
+    padding: 0;
+    margin: 10px;
+    width: calc(25% - 20px); 
+ }
+
+ .grid .item-content{     /* Lo pide la libreria */
+     position: relative;
+
+ }
+
+ .grid .item img { 
+     width: 100%;
+     cursor: pointer;
+     vertical-align: top;
+ }
+
+ /* Overlay */
+
+ .overlay{
+    position: fixed; 
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100vh;
+    display: none; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column;
+ }
+
+ .overlay.active{
+     display: flex;
+ }
+
+ .overlay img {
+     max-width: 100%;
+
+ }
+
+ .overlay .description{
+     display: block;
+     background: rgb(247, 247, 247);
+     padding: 20px;
+     text-align: center;
+     margin-top: 5px;
+     border-radius: 10px;
+     max-width: 200px;
+ }
+
+ .container-img{
+     position: relative;
+ }
+
+ .overlay #btn-close-popup{ 
+     background: none;
+     font-size: 20px;
+     color: white;
+     border: none;
+     cursor: pointer;
+     position: absolute;
+     right: -50px;
+     top: -20px;
+
+ }
